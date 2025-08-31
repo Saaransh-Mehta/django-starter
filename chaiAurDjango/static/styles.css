@@ -1,0 +1,10 @@
+h1{
+    background-color: burlywood;
+    color: whitesmoke;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
