@@ -1,16 +1,20 @@
-{% load static tailwind_tags %}
-{% load static %}
+{% extends 'layout.html' %}
+{% block title%}
+All_chai
+{% endblock%}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <title>Document</title> 
-    {% tailwind_css %}
-</head>
-<body>
-    <h1 class="main-head flex justify-center items-center">This is the main heading for a djangoApp</h1>
-</body>
-</html>
+{% block content %}
+<h1 class="flex justify-center items-center text-3xl">Under block content </h1>
+
+
+{% for chai in chais  %}
+    <div class='chai-items'>
+        <img src="{{chai.image.url}}" alt="">
+        <h1>{{chai.name}}</h1>
+    </div>
+{% endfor %}
+
+
+
+{% endblock %}
+
